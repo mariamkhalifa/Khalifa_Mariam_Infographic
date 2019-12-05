@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 // get the dynamic data that goes with each svg graphic
 router.get('/info/:target', (req,res) => {
   // set up your sql query here and retrieve teh relevant data
-  let query = `SELECT * FROM stats WHERE id="${req.params.target}"`;
+  let query = `SELECT * FROM tbl_books WHERE id="${req.params.target}"`;
   
   sql.query(query, (err, result) => {
     if (err) {console.log(err);}
