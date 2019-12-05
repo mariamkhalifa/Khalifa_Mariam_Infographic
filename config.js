@@ -2,7 +2,7 @@ const config = {
     host: 'localhost',
     user: 'root',
     passwrod: '',
-    database: 'db_beerstats',
+    database: 'db_harrypotterbooks',
     port: 3306
 }
 
