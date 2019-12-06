@@ -2,12 +2,12 @@
 (() => {
 
     // try to get the object and do stuff with it
-    let seeMoreButtons =document.querySelectorAll('.see-more'),
+    let seeMore =document.querySelectorAll('.see-more'),
         popOver = document.querySelector('.popover');
 
     // set up waypoints and make thinsg happen
     let waypoint1 = new Waypoint({
-        element: document.getElementById('beer2'),
+        element: document.getElementById('book1'),
         handler: function(direction) {
             console.log('Scrolled to waypoint!');
             // this.element.innerHTML += "<p>I got added with Waypoint!</p>";
@@ -16,7 +16,7 @@
     });
 
     let waypoint2 = new Waypoint({
-        element: document.getElementById('beer3'),
+        element: document.getElementById('book2'),
         handler: function(direction) {
             console.log('scrolled  to waypoint');
             let svg = this.element.firstElementChild.contentDocument;
@@ -25,26 +25,17 @@
         offset: 300
     });
 
-
-    let svgWrapper = document.querySelector(".svg-wrapper");
-
-    // function showSVG(e) {
-    //     //debugger;
-    // }
-
-    // svgWrapper.addEventListener("mouseover", showSVG);
-
     function showPopover(beerdata, el) {
-        popOver.querySelector('.ipa-rating').textContent = `IPA Rating: ${beerdata.IpaRating}`;
-        popOver.querySelector('.rating').textContent = `IPA Rating: ${beerdata.rating}`;
-        popOver.querySelector('.beer-description').textContent = beerdata.description;
+        popOver.querySelector('.rating-text').textContent = bookdata.rating;
+        popOver.querySelector('.year').textContent = bookdata.rating;
+        popOver.querySelector('.age').textContent = bookdata.age;
+        popOver.querySelector('.villain').textContent = bookdata.villain;
 
         popOver.classList.add('show-popover');
 
         el.appendChild(popOver);
     }
 
-    // do our fethc call to database
     function fetchData() {
         let url = `/info/${this.dataset.target}`;
             targetElement = this;
@@ -60,5 +51,5 @@
         })
     }
 
-    seeMoreButtons.forEach(button => button.addEventListener('click', fetchData));
+    seeMore.forEach(button => button.addEventListener('click', fetchData));
 })();
