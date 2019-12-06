@@ -1,0 +1,12 @@
+$black: #1E1E1E;
+$font: 'Irish Grover', cursive;
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin row {
+    display: flex;
+    flex-direction: row;
+}
