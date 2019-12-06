@@ -1,0 +1,148 @@
+@import '_vars';
+@import 'modules/_popover';
+
+// html {
+//     scroll-behavior: smooth;
+// }
+
+img, embed, object, video {
+    max-width: 100%;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $black;
+    color: white;
+    font-family: $font;
+}
+
+h1, h2, h3, h4, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.main-header {
+    @include column;
+    align-items: center;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2.8em;
+    line-height: .5em;
+    margin-top: 80px;
+}
+
+.logo {
+    width: 280px;
+    margin-top: 20px;
+}
+
+main {
+    padding: 0 25px;
+}
+
+.book {
+    @include column;
+    align-items: center;
+    background-color: $grey;
+    width: 80%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    padding: 40px 20px 10px 20px;
+    border: 3px solid $l-grey;
+}
+
+.title-con {
+    @include column;
+    align-items: center; 
+}
+
+.title {
+    text-align: center;
+    span { font-size: .8em; }
+}
+
+.svg-graphic {
+    width: 40px;
+    margin-top: 40px;
+}
+
+#snake {
+    width: 50px;
+}
+
+#prison {
+    width: 60px;
+}
+
+#phoenix {
+    width: 90px;
+}
+
+#cauldron {
+    width: 60px;
+}
+
+#hallows {
+    width: 60px;
+}
+
+.info {
+    border-top: 1px solid $l-grey;
+    width: 100%;
+    margin-top: 40px;
+    @include column;
+    align-items: center;
+}
+
+.fa-angle-down {
+    font-size: 4em;
+    color: $l-grey;
+}
+
+.see-more {
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+#book-7 {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 767px) {
+    .book {
+        @include row;
+        justify-content: space-between;
+        padding: 30px 25px;
+        max-width: 500px;
+    }
+    .title-con {
+        width: 50%;
+        padding-right: 20px;
+        border-right: 1px solid $l-grey;
+    }
+    .info {
+        border-top: none;
+        width: 50%;
+    }
+    .see-more {
+        position: relative;
+        left: -80px;
+        top: -20px;
+        transform: rotate(270deg);
+        -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+    }
+}
