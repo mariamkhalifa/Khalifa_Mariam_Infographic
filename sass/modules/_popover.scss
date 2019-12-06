@@ -1,3 +1,32 @@
 .popover {
     display: none;
+    position: absolute;
+    top: 30px;
+    left: -110px;
+    background-color: $grey;
+    width: 220px;
+    z-index: 1;
+    padding: 20px;
+    transform: rotate(90deg);
+}
+
+.show-popover {
+    display: block;
+}
+
+.con {
+    @include row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.icon {
+    width: 30px;
+}
+
+.con p {
+    font-family: "Times New Roman", serif;
+    font-size:  .2em;
+    color: white;
+    line-height: 2em;
 }

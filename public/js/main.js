@@ -1,16 +1,13 @@
 
 (() => {
 
-    // try to get the object and do stuff with it
     let seeMore =document.querySelectorAll('.see-more'),
         popOver = document.querySelector('.popover');
 
-    // set up waypoints and make thinsg happen
     let waypoint1 = new Waypoint({
         element: document.getElementById('book1'),
         handler: function(direction) {
             console.log('Scrolled to waypoint!');
-            // this.element.innerHTML += "<p>I got added with Waypoint!</p>";
         }
         
     });
@@ -25,11 +22,11 @@
         offset: 300
     });
 
-    function showPopover(beerdata, el) {
-        popOver.querySelector('.rating-text').textContent = bookdata.rating;
-        popOver.querySelector('.year').textContent = bookdata.rating;
-        popOver.querySelector('.age').textContent = bookdata.age;
-        popOver.querySelector('.villain').textContent = bookdata.villain;
+    function showPopover(bookdata, el) {
+        popOver.querySelector('.rating-text').textContent = `Goodread's Rating:${bookdata.rating}`;
+        popOver.querySelector('.year-text').textContent = `Publishing Year: ${bookdata.rating}`;
+        popOver.querySelector('.age-text').textContent = `Harry's Age: ${bookdata.age}`;
+        popOver.querySelector('.villain-text').textContent = `Villain: ${bookdata.villain}`;
 
         popOver.classList.add('show-popover');
 
